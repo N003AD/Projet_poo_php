@@ -1,0 +1,12 @@
+MODELE
+Pour faire l'héritage on a 3 approches
+1 ière approche:
+-Single Table: Toutes les classes qui participent dans l'héritage seront dans une seule tables 
+
+-
+
+
+
+2 ième approche:
+-Joined => On crée autant de Table que de classe mais la classe mère migre comme cle étrangère au niveau des classes filles
+

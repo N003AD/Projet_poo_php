@@ -1,0 +1,41 @@
+ttattaché pas etu
+attaché -> inscription
+déplacé Role dans = > Personne
+NB: Toutes les personnes qui peuvent se connecter sont attachés à USER et ceux qui ne peuvent pas se connecter sont attachés à Personne
+
+Toutes les fonctionalités qu'on définit sur les Uses Cases sont des fonctionalités abstraites ( role des Uses Case : quoi).
+On sqit que la fonctionalité existe mais on ne sait pas comment on va le réalisé
+Le role du DS c'est de répondre à la question du comment: il va prendre un Use Case et va expliqué comment le Use Case va s'exécuter
+
+        DIAGRAMME DE SEQUENCE DU MODELE MVC (PROJET) 
+Ligne de vie ( c'est au moment ou on crée un objet durant toute sa vie => new)
+montre comment les objets vont communiqués entre eux pour produire un resultat
+
+Dans notre projet nous avons un UTILISATEUR (USER) qui communique avec les VUES 
+Les 2 types de REQUEST peut etre GET(URL) ou POST(formulaire): la REQUEST est envoyé au niveau du FRONT Controller (INDEX.php)
+Une requete est envoyé de la vue vers le FRONT Controller.Le FRONT controller est la porte d'entrée d'entré de notre application.
+Toutes les requetes passes par le FRONT controller (GET ou POST).
+
+Le FRONT controller fait appelle au ROUTEUR.
+Quand je mets 2 points c'est parceque c'est des objets qui sont en train de communiqués
+NB:Quand on crée une application Orienté Objet c'est pas des classes qui communiquent mais des objets qui communiques.
+Quand je mets 2 points c'est parceque j'ai un objet de type ROUTER et l'autre un objet de type FRONT Controller
+
+Les messages synchrones vous etes en attentes d'un resultat(messages bloquant) => Tant qu'on vous a retouné le resultat vous n'avez pa la possibilité de continué
+un messages asynchrone ne bloque pas.
+Le ROUTER va aller choisir un Controller
+ Ce controller va choisir une action (Uses Case).
+
+    NB: Le DIAGRAMME DE CLASSE doit etre implémenté dans le MODELE
+        Le DIAGRAMME DE USE CASE sera implémenté dans nos Controller.
+A chaque fois qu'une requete est déclenché c'est parcequ'on demande un Use Case.
+Chaque USE CASE va déclenché un REQUEST (GET / POST)
+Une fois que l'action est déclenché on fait appelle au modéle.Un Use Case fait appelle au MODELE s'il a besoin de donner un niveau de notre BD.
+
+ACTION DE DONNE (INSERT, SELECT, UPDATE, DELETE).
+NB: Le controller s'il a besoin quelque chose sur la BD il va obligatoirement passer par le modéle.Et le modéle va communiqué avec la BD 
+et une requete sql va etre exécuté au niveau de notre BD.
+modéle => controller et resultat => vue et l'utilisateur vois le resultat
+Le MODELE joue le role d'ORM (il prend les objets et les traduits en requetes sql)
+
+
